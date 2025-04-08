@@ -71,6 +71,7 @@ const foodDatabase = [
     { name: "Nachos with Cheese", calories: 346, protein: 8, servingSize: 1, servingUnit: "serving (180g)" },
     { name: "Mashed Potatoes with Gravy", calories: 214, protein: 4, servingSize: 1, servingUnit: "cup (210g)" },
     { name: "Apple Pie Slice", calories: 320, protein: 2, servingSize: 1, servingUnit: "slice (1/8 of 9\" pie)" }
+    { name: "Cake Batter Yogurt Bowl", calories: 330, protein: 18, servingSize: 1, servingUnit: "bowl (1/2 cup cake batter yogurt + graham cracker crumbles + chocolate pretzel + 1 Gold Oreo)"}
   ];
   
 const foodInput = document.getElementById('food-input');
