@@ -1,0 +1,263 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.daily-summary {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-item span:first-child {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.summary-item span:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#calorie-goal {
+    width: 70px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.add-food {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.food-search {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#food-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.autocomplete-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: #f0f0f0;
+}
+
+.food-details {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.food-details input, .food-details select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#food-quantity {
+    width: 80px;
+}
+
+#food-unit, #meal-type {
+    min-width: 100px;
+}
+
+#add-food-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#add-food-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.meal-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.meal-section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.meal-section h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.food-list {
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.food-item:last-child {
+    border-bottom: none;
+}
+
+.food-name {
+    font-weight: bold;
+    flex: 1;
+}
+
+.food-details {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.food-calories {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.food-protein {
+    color: var(--success-color);
+}
+
+.delete-btn {
+    color: var(--danger-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.meal-total {
+    text-align: right;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.meal-calories {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.meal-protein {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .daily-summary {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .food-details {
+        flex-direction: column;
+    }
+    
+    #food-input, #food-quantity, #food-unit, #meal-type, #add-food-btn {
+        width: 100%;
+    }
+}
